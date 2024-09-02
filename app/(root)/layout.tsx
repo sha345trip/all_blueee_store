@@ -19,19 +19,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-        <ClerkProvider>
-          <SignedOut>
-          <SignInButton />
-        </SignedOut>
-        <SignedIn>
-          <UserButton />
-        </SignedIn>
-        <ToasterProvider/>
-        <Navbar/>
+    <body className={inter.className}>
+      <ClerkProvider>
+        <ToasterProvider />
+        <Navbar />
         {children}
-        </ClerkProvider>
-        </body>
-    </html>
+      </ClerkProvider>
+    </body>
+  </html>
   );
 }
